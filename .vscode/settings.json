@@ -13,10 +13,7 @@
 		"**/.editorconfig": true,
 		"**/.gitignore": true,
 		"**/.prettierignore": true,
-		"**/.prettierrc": true,
-		"**/astro.config.mjs": true,
-		"**/tailwind.config.mjs": true,
-		"**/tsconfig.json": true
+		"**/.prettierrc": true
 	},
 	"[markdown]": {
 		"editor.defaultFormatter": "yzhang.markdown-all-in-one"

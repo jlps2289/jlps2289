@@ -1,0 +1,12 @@
+---
+interface Props {
+	title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section class='group py-8'>
+	{title && <h4 class='mb-3 transition-colors group-hover:text-primary-500'>{title}</h4>}
+	<slot />
+</section>
