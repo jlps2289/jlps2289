@@ -1,21 +1,24 @@
 ---
+import { basics } from '@cv';
+
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+const { name, label, summary } = basics;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang='es'>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="+10 años de experiencia en el desarrollo frontend. Conozco HTML5, CSS3, SCSS, TailwindCSS, JavaScript y TypeScript. Habil en el manojo de frameworks como Angular, Astro, React y NextJs." />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title} | Sr. Frontend Developer</title>
+		<meta charset='UTF-8' />
+		<meta name='description' content={summary} />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<title>{title} {name} | {label}</title>
 	</head>
-	<body class="container mx-auto max-w-4xl p-8 sm:px-16">
+	<body class='container mx-auto max-w-4xl p-8 sm:px-16'>
 		<slot />
 	</body>
 </html>
@@ -27,26 +30,47 @@ const { title } = Astro.props;
 		@apply scroll-smooth bg-white tracking-tight;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		@apply text-balance;
 	}
 
-	h1, h2, h3 {
+	h1,
+	h2,
+	h3 {
 		@apply font-semibold;
 	}
 
-	h4, h5, h6 {
+	h4,
+	h5,
+	h6 {
 		@apply font-bold;
 	}
 
-	h1 { @apply text-4xl; }
-	h2 { @apply text-3xl; }
-	h3 { @apply text-2xl; }
-	h4 { @apply text-xl; }
-	h5 { @apply text-lg; }
-	h6 { @apply text-base; }
+	h1 {
+		@apply text-4xl;
+	}
+	h2 {
+		@apply text-3xl;
+	}
+	h3 {
+		@apply text-2xl;
+	}
+	h4 {
+		@apply text-xl;
+	}
+	h5 {
+		@apply text-lg;
+	}
+	h6 {
+		@apply text-base;
+	}
 
 	p {
-		@apply text-gray-500 text-sm text-pretty font-light;
+		@apply text-pretty text-sm font-light text-gray-500;
 	}
 </style>
