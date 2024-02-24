@@ -1,0 +1,24 @@
+{
+	"cSpell.allowCompoundWords": true,
+	"cSpell.language": "en,es,en-US",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnType": true,
+	"editor.rulers": [130],
+	"files.exclude": {
+		"**/.husky": true,
+		"**/.vscode": true,
+		"**/resources": true,
+		"**/.editorconfig": true,
+		"**/.gitignore": true,
+		"**/.prettierignore": true,
+		"**/.prettierrc": true,
+		"**/astro.config.mjs": true,
+		"**/tailwind.config.mjs": true,
+		"**/tsconfig.json": true
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "yzhang.markdown-all-in-one"
+	}
+}
