@@ -14,6 +14,7 @@ import Section from '@/layouts/Section.astro';
 			skills.map(i => (
 				<Image
 					class='rounded-md border-2 border-secondary/50'
+					title={i.name}
 					src={`https://img.shields.io/badge/${i.name}-white?logo=${i.icon}&logoColor=${i.color}&style=for-the-badge`}
 					alt={i.name}
 					inferSize={true}
