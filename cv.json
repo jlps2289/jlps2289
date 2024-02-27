@@ -35,24 +35,24 @@
 			"name": "Zulu",
 			"position": "Sr. FrontEnd Developer",
 			"url": "https://zulu.com.co/",
-			"startDate": "01-09-2022",
-			"endDate": "31-08-2023",
+			"startDate": "09-01-2022",
+			"endDate": "08-31-2023",
 			"summary": "Participe en el desarrollo de la plataforma web B2B, permitiendo a las empresas realizar transferencias de fondos en dólares digitales (USDC) de manera mas rápida y transparente mediante la integración con Web 3 y la realización de transferencias a través de Polygon. Este proyecto se realizó mediante el uso de tecnologías como NextJS y React implementando un Backend For FrontEnd (BFF) para establecer una comunicación encriptada con AES256 entre la capa pública y el backend."
 		},
 		{
 			"name": "Dibanka",
 			"position": "SSr. FrontEnd Developer",
 			"url": "https://dibanka.co/",
-			"startDate": "01-07-2021",
-			"endDate": "31-08-2022",
+			"startDate": "07-01-2021",
+			"endDate": "08-31-2022",
 			"summary": "Participe en el desarrollo de su producto principal permitiendo a los operadores de las entidades bancarías y los beneficiaros de las compañías afiliadas la solicitud y gestión de sus créditos de libranza. Iniciamos con el equipo el desarrollo de su propia libreria de componentes en React y al mismo tiempo la migración de tecnología en su versión 2.0 para hacer el proyecto mas escalable con el uso de React."
 		},
 		{
 			"name": "Indra Colombia",
 			"position": "Jr. FrontEnd Developer",
 			"url": "https://www.indracompany.com/es",
-			"startDate": "01-12-2019",
-			"endDate": "30-06-2021",
+			"startDate": "12-01-2019",
+			"endDate": "06-30-2021",
 			"summary": "Iniciamos el desarrollo de una aplicación web para la gestión de la información petrolera (BDP) y una aplicación de administración transversal de Ecopetrol (una de las compañías mas importantes del sector petrolero en Colombia). Los desarrollos fueron realizados con React y algunos componentes de DevExtreme y AntDesign."
 		},
 		{
@@ -60,7 +60,7 @@
 			"position": "FrontEnd Developer",
 			"url": "https://www.linkedin.com/company/control-online-s-a-s/",
 			"startDate": "01-01-2018",
-			"endDate": "31-01-2019",
+			"endDate": "01-31-2019",
 			"summary": "Participe en varios proyectos entre los cuales destaca el desarrollo de VIEDO para la Agencia Nacional de Hidrocarburos de Colombia (ANH) para registrar los informes diarios de producción de crudo y gas de las compañías petroleras de Colombia desarrollado en Angular JS. Un catálogo virtual en Angular +4 para la gestión de información de una librería implementando un Backend con NodeJS y MongoDB."
 		},
 		{
@@ -68,7 +68,7 @@
 			"position": "Web Designer",
 			"url": "https://www.linkedin.com/in/conexion-salud-colombia/",
 			"startDate": "01-10-2014",
-			"endDate": "31-12-2016",
+			"endDate": "12-31-2016",
 			"summary": "Participe en el desarrollo de varias aplicaciones entre las cuales destaca el desarrollo de una aplicación para gestionar el trayecto y crecimiento personal de la membresía de una iglesia al igual que una aplicación para la gestión de los estudiantes en su escuela de formación de lideres desarrolladas con HTML5, CSS3 y JS con MVC (Modelo, Vista, Controlador)"
 		}
 	],
