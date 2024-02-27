@@ -22,9 +22,9 @@ import ExternalLink from '@/components/icons/external-link.astro';
 							<ExternalLink class='h-4 w-4' />
 						</span>
 					</a>
-					<small class='flex flex-col font-normal text-secondary/90 md:flex-row md:items-center md:justify-between'>
+					<small class='flex flex-col font-normal text-secondary/90 md:flex-row md:items-center md:justify-between dark:text-neutral-200'>
 						{i.position}
-						<span class='w-fit rounded-md border border-secondary/25 px-4 font-semibold transition-colors group-hover/article:border-primary group-hover/article:bg-primary group-hover/article:text-white'>
+						<span class='w-fit rounded-md border border-secondary/25 px-4 font-semibold transition-colors group-hover/article:border-primary group-hover/article:bg-primary group-hover/article:text-white dark:border-neutral-200/25 dark:group-hover/article:text-neutral-800'>
 							{dayjs(i.startDate).format('YYYY')} - {i.endDate ? dayjs(i.endDate).format('YYYY') : 'Actualidad'}
 						</span>
 					</small>

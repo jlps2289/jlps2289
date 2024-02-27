@@ -1,5 +1,4 @@
 <div align="center" width="200">
-<img align="center" width="100" src="https://avatars.githubusercontent.com/u/26493030?v=4" style='border-radius: 9999px; margin: 30px 0;' />
 
 # 👋🏼 Hola, soy Jose Luis
 
