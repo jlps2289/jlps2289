@@ -11,12 +11,12 @@ import Section from '@/layouts/Section.astro';
 import ExternalLink from '@/components/icons/external-link.astro';
 ---
 
-<Section title='Experience'>
+<Section title='Experiencia Laboral'>
 	{
 		work.map(i => (
 			<article class='group/article mb-8 last-of-type:mb-0'>
 				<h4 class='mb-3 transition-colors group-hover/article:text-primary'>
-					<a class='flex w-fit items-baseline gap-2 hover:underline' href={i.url} target='_blank' rel='noopener noreferrer'>
+					<a class='flex w-fit items-center gap-2 hover:underline' href={i.url} target='_blank' rel='noopener noreferrer'>
 						{i.name}
 						<span class='opacity-0 transition-opacity group-hover/article:opacity-100'>
 							<ExternalLink class='h-4 w-4' />
