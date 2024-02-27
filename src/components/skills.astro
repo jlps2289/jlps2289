@@ -15,7 +15,7 @@ import Section from '@/layouts/Section.astro';
 				<Image
 					class='rounded-md border border-secondary/25'
 					title={i.name}
-					src={`https://img.shields.io/badge/${i.name}-white?logo=${i.icon}&logoColor=${i.color}&style=for-the-badge`}
+					src={`https://img.shields.io/badge/${i.name}-gray?logo=${i.icon}&logoColor=${i.color}&style=for-the-badge`}
 					alt={i.name}
 					inferSize={true}
 					loading='lazy'
@@ -24,3 +24,8 @@ import Section from '@/layouts/Section.astro';
 		}
 	</div>
 </Section>
+
+<script>
+	const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	console.log({ darkMode });
+</script>
