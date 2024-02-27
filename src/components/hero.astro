@@ -1,5 +1,92 @@
 ---
+import { Image } from 'astro:assets';
+
+// Data
+import { basics } from '@cv';
+
+// Components
 import Section from '@/layouts/Section.astro';
+
+// Icons
+import FlagColombia from '@/components/icons/colombia.astro';
+import IconEnvelope from '@/components/icons/envelope.astro';
+import IconPhone from '@/components/icons/phone.astro';
+import GitHub from '@/components/icons/github.astro';
+import LinkedIn from '@/components/icons/linkedin.astro';
+import Telegram from '@/components/icons/telegram.astro';
+
+const { name, label, image, email, phone, location, profiles } = basics;
+const { city, region } = location;
+
+const SOCIAL_ICONS: Record<string, string | any> = {
+	GitHub,
+	LinkedIn,
+	Telegram
+};
 ---
 
-<Section title='Hero' />
+<Section class='flex flex-col items-start justify-between gap-8 lg:flex-row-reverse'>
+	<figure class='mx-auto max-w-[130px]'>
+		<Image
+			class='aspect-square overflow-hidden rounded-full border-2 border-secondary/50 object-cover'
+			src={image}
+			alt={name}
+			inferSize={true}
+			loading='eager'
+		/>
+	</figure>
+	<div class='flex flex-col justify-center text-center lg:text-left'>
+		<h1 class='mb-2 text-3xl'>{name}</h1>
+		<h2 class='mb-1 text-base font-normal'>{label}</h2>
+		<p class='mb-3 flex items-center justify-center gap-2 font-extralight lg:justify-normal'>
+			{city} - {region}
+			<FlagColombia />
+		</p>
+
+		<div class='flex justify-center gap-1 lg:justify-normal'>
+			{
+				email && (
+					<a
+						href={`mailto:${email}`}
+						title={`Enviar un correo electrónico a ${name} al correo ${email}`}
+						target='_blank'
+						rel='noopener noreferrer'>
+						<IconEnvelope />
+					</a>
+				)
+			}
+			{
+				phone && (
+					<a
+						href={`tel:${phone}`}
+						title={`Llamar por teléfono a ${name} al número ${phone}`}
+						target='_blank'
+						rel='noopener noreferrer'>
+						<IconPhone />
+					</a>
+				)
+			}
+			{
+				profiles.map(({ network, url, username }) => {
+					const Icon = SOCIAL_ICONS[network];
+
+					return (
+						<a
+							href={url}
+							title={`Visitar el perfil de ${name} (${username}) en ${network}`}
+							target='_blank'
+							rel='noopener noreferrer'>
+							<Icon />
+						</a>
+					);
+				})
+			}
+		</div>
+	</div>
+</Section>
+
+<style>
+	a {
+		@apply rounded border-2 border-secondary/25 p-1 text-lg text-secondary/80 transition hover:border-primary hover:text-primary hover:ring-2 hover:ring-primary;
+	}
+</style>
