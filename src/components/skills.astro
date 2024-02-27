@@ -1,5 +1,25 @@
 ---
+import { Image } from 'astro:assets';
+
+// Data
+import { skills } from '@cv';
+
+// Components
 import Section from '@/layouts/Section.astro';
 ---
 
-<Section title='Skills' />
+<Section title='Habilidades'>
+	<div class='flex flex-wrap gap-2'>
+		{
+			skills.map(i => (
+				<Image
+					class='rounded-md border-2 border-secondary/50'
+					src={`https://img.shields.io/badge/${i.name}-white?logo=${i.icon}&logoColor=${i.color}&style=for-the-badge`}
+					alt={i.name}
+					inferSize={true}
+					loading='lazy'
+				/>
+			))
+		}
+	</div>
+</Section>

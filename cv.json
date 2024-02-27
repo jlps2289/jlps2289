@@ -1,67 +1,75 @@
 {
 	"basics": {
-		"name": "John Doe",
-		"label": "Programmer",
-		"image": "",
-		"email": "john@gmail.com",
-		"phone": "(912) 555-4321",
-		"url": "https://johndoe.com",
-		"summary": "Soy una persona organizada, responsable y con habilidades para liderar y resolver problemas. Aprendo rápido y tengo conocimientos avanzados en lenguaje HTML5, CSS3, SCSS y TypeScript, y uso frameworks como Angular, React y NextJs. Actualmente, acumulo más de 10 años de experiencia como desarrollador web. Además, soy bueno en la comunicación y atención al usuario.",
+		"name": "Jose Luis Parra Sánchez",
+		"label": "Sr. Frontend Developer con más de 10 años de experiencia en el desarrollo de aplicaciones web.",
+		"image": "https://avatars.githubusercontent.com/u/26493030?v=4",
+		"email": "jl.ps2289@gmail.com",
+		"phone": "+57 3156853620",
+		"summary": "+10 años de experiencia en el desarrollo de aplicaciones web en el sector financiero y petrolero de Colombia. Mi participación a aportado mejoras en infraestructura, rendimiento, escalabilidad, seguridad y experiencia de usuario creando herramientas y componentes de acuerdo a las necesidades del cliente y para la agilidad del equipo. Me gusta participar y aportar mis ideas y posibles soluciones ante problemas en común durante el desarrollo.",
 		"location": {
-			"address": "2712 Broadway St",
-			"postalCode": "CA 94115",
-			"city": "San Francisco",
-			"countryCode": "US",
-			"region": "California"
+			"address": "",
+			"city": "Neiva, Huila",
+			"countryCode": "COL",
+			"region": "Colombia"
 		},
 		"profiles": [
 			{
-				"network": "Twitter",
-				"username": "john",
-				"url": "https://twitter.com/john"
+				"network": "LinkedIn",
+				"username": "jlps2289",
+				"url": "https://www.linkedin.com/in/jlps2289/"
+			},
+			{
+				"network": "GitHub",
+				"username": "jlps2289",
+				"url": "https://github.com/jlps2289"
+			},
+			{
+				"network": "Telegram",
+				"username": "jlps2289",
+				"url": "https://t.me/jlps2289"
 			}
 		]
 	},
 	"work": [
 		{
-			"name": "Company",
-			"position": "President",
-			"url": "https://company.com",
-			"startDate": "2013-01-01",
-			"endDate": "2014-01-01",
-			"summary": "Description…",
-			"highlights": ["Started the company"]
-		}
-	],
-	"volunteer": [
+			"name": "Zulu",
+			"position": "Sr. FrontEnd Developer",
+			"url": "https://zulu.com.co/",
+			"startDate": "01-09-2022",
+			"endDate": "31-08-2023",
+			"summary": "Participe en el desarrollo de la plataforma web B2B, permitiendo a las empresas realizar transferencias de fondos en dólares digitales (USDC) de manera mas rápida y transparente mediante la integración con Web 3 y la realización de transferencias a través de Polygon. Este proyecto se realizó mediante el uso de tecnologías como NextJS y React implementando un Backend For FrontEnd (BFF) para establecer una comunicación encriptada con AES256 entre la capa pública y el backend."
+		},
 		{
-			"organization": "Organization",
-			"position": "Volunteer",
-			"url": "https://organization.com/",
-			"startDate": "2012-01-01",
-			"endDate": "2013-01-01",
-			"summary": "Description…",
-			"highlights": ["Awarded 'Volunteer of the Month'"]
-		}
-	],
-	"education": [
+			"name": "Dibanka",
+			"position": "SSr. FrontEnd Developer",
+			"url": "https://dibanka.co/",
+			"startDate": "01-07-2021",
+			"endDate": "31-08-2022",
+			"summary": "Participe en el desarrollo de su producto principal permitiendo a los operadores de las entidades bancarías y los beneficiaros de las compañías afiliadas la solicitud y gestión de sus créditos de libranza. Iniciamos con el equipo el desarrollo de su propia libreria de componentes en React y al mismo tiempo la migración de tecnología en su versión 2.0 para hacer el proyecto mas escalable con el uso de React."
+		},
 		{
-			"institution": "University",
-			"url": "https://institution.com/",
-			"area": "Software Development",
-			"studyType": "Bachelor",
-			"startDate": "2011-01-01",
-			"endDate": "2013-01-01",
-			"score": "4.0",
-			"courses": ["DB1101 - Basic SQL"]
-		}
-	],
-	"awards": [
+			"name": "Indra Colombia",
+			"position": "Jr. FrontEnd Developer",
+			"url": "https://www.indracompany.com/es",
+			"startDate": "01-12-2019",
+			"endDate": "30-06-2021",
+			"summary": "Iniciamos el desarrollo de una aplicación web para la gestión de la información petrolera (BDP) y una aplicación de administración transversal de Ecopetrol (una de las compañías mas importantes del sector petrolero en Colombia). Los desarrollos fueron realizados con React y algunos componentes de DevExtreme y AntDesign."
+		},
 		{
-			"title": "Award",
-			"date": "2014-11-01",
-			"awarder": "Company",
-			"summary": "There is no spoon."
+			"name": "Control Online S.A.S.",
+			"position": "FrontEnd Developer",
+			"url": "https://www.linkedin.com/company/control-online-s-a-s/",
+			"startDate": "01-01-2018",
+			"endDate": "31-01-2019",
+			"summary": "Participe en varios proyectos entre los cuales destaca el desarrollo de VIEDO para la Agencia Nacional de Hidrocarburos de Colombia (ANH) para registrar los informes diarios de producción de crudo y gas de las compañías petroleras de Colombia desarrollado en Angular JS. Un catálogo virtual en Angular +4 para la gestión de información de una librería implementando un Backend con NodeJS y MongoDB."
+		},
+		{
+			"name": "Conexión Salud Colombia S.A.",
+			"position": "Web Designer",
+			"url": "https://www.linkedin.com/in/conexion-salud-colombia/",
+			"startDate": "01-10-2014",
+			"endDate": "31-12-2016",
+			"summary": "Participe en el desarrollo de varias aplicaciones entre las cuales destaca el desarrollo de una aplicación para gestionar el trayecto y crecimiento personal de la membresía de una iglesia al igual que una aplicación para la gestión de los estudiantes en su escuela de formación de lideres desarrolladas con HTML5, CSS3 y JS con MVC (Modelo, Vista, Controlador)"
 		}
 	],
 	"certificates": [
@@ -72,38 +80,92 @@
 			"url": "https://certificate.com"
 		}
 	],
-	"publications": [
-		{
-			"name": "Publication",
-			"publisher": "Company",
-			"releaseDate": "2014-10-01",
-			"url": "https://publication.com",
-			"summary": "Description…"
-		}
-	],
 	"skills": [
 		{
-			"name": "Web Development",
-			"level": "Master",
-			"keywords": ["HTML", "CSS", "JavaScript"]
+			"name": "React",
+			"icon": "react",
+			"color": "61DAFB"
+		},
+		{
+			"name": "Next.js",
+			"icon": "nextdotjs",
+			"color": "000000"
+		},
+		{
+			"name": "Angular",
+			"icon": "angular",
+			"color": "0F0F11"
+		},
+		{
+			"name": "Astro",
+			"icon": "astro",
+			"color": "BC52EE"
+		},
+		{
+			"name": "TailwindCSS",
+			"icon": "tailwindcss",
+			"color": "06B6D4"
+		},
+		{
+			"name": "TypeScript",
+			"icon": "typescript",
+			"color": "3178C6"
+		},
+		{
+			"name": "Node.js",
+			"icon": "nodedotjs",
+			"color": "339933"
+		},
+		{
+			"name": "Git",
+			"icon": "git",
+			"color": "F05032"
+		},
+		{
+			"name": "GitHub",
+			"icon": "github",
+			"color": "181717"
+		},
+		{
+			"name": "HTML5",
+			"icon": "html5",
+			"color": "E34F26"
+		},
+		{
+			"name": "CSS3",
+			"icon": "css3",
+			"color": "1572B6"
+		},
+		{
+			"name": "Sass",
+			"icon": "sass",
+			"color": "CC6699"
+		},
+		{
+			"name": "Bootstrap",
+			"icon": "bootstrap",
+			"color": "7952B3"
+		},
+		{
+			"name": "JavaScript",
+			"icon": "javascript",
+			"color": "F7DF1E"
+		},
+		{
+			"name": "Dart",
+			"icon": "dart",
+			"color": "0175C2"
+		},
+		{
+			"name": "Mongo DB",
+			"icon": "mongodb",
+			"color": "47A248"
 		}
 	],
 	"languages": [
 		{
-			"language": "English",
-			"fluency": "Native speaker"
-		}
-	],
-	"interests": [
-		{
-			"name": "Wildlife",
-			"keywords": ["Ferrets", "Unicorns"]
-		}
-	],
-	"references": [
-		{
-			"name": "Jane Doe",
-			"reference": "Reference…"
+			"language": "Español",
+			"fluency": "Hablante nativo"
 		}
 	],
 	"projects": [
