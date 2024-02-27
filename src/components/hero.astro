@@ -28,7 +28,7 @@ const SOCIAL_ICONS: Record<string, string | any> = {
 <Section class='flex flex-col items-start justify-between gap-8 lg:flex-row-reverse'>
 	<figure class='mx-auto max-w-[130px]'>
 		<Image
-			class='aspect-square overflow-hidden rounded-full border-2 border-secondary/50 object-cover'
+			class='aspect-square overflow-hidden rounded-full border-2 border-secondary/25 object-cover'
 			src={image}
 			alt={name}
 			inferSize={true}
@@ -87,6 +87,6 @@ const SOCIAL_ICONS: Record<string, string | any> = {
 
 <style>
 	a {
-		@apply rounded border-2 border-secondary/25 p-1 text-lg text-secondary/80 transition hover:border-primary hover:text-primary hover:ring-2 hover:ring-primary;
+		@apply rounded border border-secondary/25 p-1 text-lg text-secondary/80 transition hover:border-primary hover:bg-primary hover:text-white;
 	}
 </style>

@@ -24,7 +24,7 @@ import ExternalLink from '@/components/icons/external-link.astro';
 					</a>
 					<small class='flex flex-col font-normal text-secondary/90 md:flex-row md:items-center md:justify-between'>
 						{i.position}
-						<span class='w-fit rounded-md border-2 border-secondary/90 px-4 font-semibold transition-colors group-hover/article:border-primary group-hover/article:bg-primary group-hover/article:text-white'>
+						<span class='w-fit rounded-md border border-secondary/25 px-4 font-semibold transition-colors group-hover/article:border-primary group-hover/article:bg-primary group-hover/article:text-white'>
 							{dayjs(i.startDate).format('YYYY')} - {i.endDate ? dayjs(i.endDate).format('YYYY') : 'Actualidad'}
 						</span>
 					</small>
