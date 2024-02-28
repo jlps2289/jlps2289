@@ -164,8 +164,14 @@
 	],
 	"languages": [
 		{
+			"flag": "ES",
 			"language": "Español",
 			"fluency": "Hablante nativo"
+		},
+		{
+			"flag": "US",
+			"language": "Ingles",
+			"fluency": "A1"
 		}
 	],
 	"projects": [

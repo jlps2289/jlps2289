@@ -2,20 +2,30 @@
 import { Image } from 'astro:assets';
 
 // Data
-import { basics } from '@cv';
+import { basics, languages } from '@cv';
 
 // Components
 import Section from '@/layouts/Section.astro';
 
 // Icons
-import FlagColombia from '@/components/icons/colombia.astro';
+import FlagColombia from '@/components/icons/Colombia.astro';
+
+// Actions Icons
 import IconEnvelope from '@/components/icons/envelope.astro';
 import IconPhone from '@/components/icons/phone.astro';
+
+// Social Icons
 import GitHub from '@/components/icons/github.astro';
 import LinkedIn from '@/components/icons/linkedin.astro';
 import Telegram from '@/components/icons/telegram.astro';
+
+// Theme Icons
 import IconSun from '@/components/icons/sun.astro';
 import IconMoon from '@/components/icons/moon.astro';
+
+// Speaks Icons
+import ES from '@/components/icons/ES.astro';
+import US from '@/components/icons/US.astro';
 
 const { name, label, image, email, phone, location, profiles } = basics;
 const { city, region } = location;
@@ -24,6 +34,11 @@ const SOCIAL_ICONS: Record<string, string | any> = {
 	GitHub,
 	LinkedIn,
 	Telegram
+};
+
+const SPEAK_ICONS: Record<string, string | any> = {
+	ES,
+	US
 };
 ---
 
@@ -38,14 +53,24 @@ const SOCIAL_ICONS: Record<string, string | any> = {
 		/>
 	</figure>
 	<div class='flex flex-col justify-center text-center lg:text-left'>
-		<h1 class='mb-2 text-3xl'>{name}</h1>
+		<h1 class='mb-3 flex flex-col justify-center gap-3 text-3xl lg:flex-row lg:justify-normal'>
+			{name}
+			<span class='flex justify-center gap-2'>
+				{
+					languages.map(i => {
+						const Icon = SPEAK_ICONS[i.flag];
+						return <Icon class='size-5' title={`${i.language} - ${i.fluency}`} />;
+					})
+				}
+			</span>
+		</h1>
 		<h2 class='mb-1 text-base font-normal'>{label}</h2>
 		<p class='mb-3 flex items-center justify-center gap-2 font-extralight lg:justify-normal'>
 			{city} - {region}
 			<FlagColombia />
 		</p>
 
-		<div class='flex justify-center gap-1 lg:justify-normal'>
+		<div class='mt-3 flex justify-center gap-1 lg:justify-normal'>
 			{
 				email && (
 					<a
