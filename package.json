@@ -15,8 +15,7 @@
 		"@astrojs/check": "^0.5.5",
 		"@fontsource-variable/roboto-mono": "^5.0.17",
 		"astro": "^4.4.4",
-		"dayjs": "^1.11.10",
-		"ninja-keys": "^1.2.2"
+		"dayjs": "^1.11.10"
 	},
 	"devDependencies": {
 		"@astrojs/tailwind": "^5.1.0",
