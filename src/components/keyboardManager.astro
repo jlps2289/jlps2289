@@ -1,1 +1,181 @@
-<h4>KeyboardManager</h4>
+---
+import { basics } from '@cv';
+
+const { profiles, email, phone } = basics;
+
+const SOCIAL_ICONS: Record<string, string> = {
+	LinkedIn: `<svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256"><path fill="currentColor" d="M216 24H40a16 16 0 0 0-16 16v176a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V40a16 16 0 0 0-16-16m0 192H40V40h176zM96 112v64a8 8 0 0 1-16 0v-64a8 8 0 0 1 16 0m88 28v36a8 8 0 0 1-16 0v-36a20 20 0 0 0-40 0v36a8 8 0 0 1-16 0v-64a8 8 0 0 1 15.79-1.78A36 36 0 0 1 184 140m-84-56a12 12 0 1 1-12-12a12 12 0 0 1 12 12"/></svg>`,
+	GitHub: `<svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256"><path fill="currentColor" d="M208.31 75.68A59.78 59.78 0 0 0 202.93 28a8 8 0 0 0-6.93-4a59.75 59.75 0 0 0-48 24h-24a59.75 59.75 0 0 0-48-24a8 8 0 0 0-6.93 4a59.78 59.78 0 0 0-5.38 47.68A58.14 58.14 0 0 0 56 104v8a56.06 56.06 0 0 0 48.44 55.47A39.8 39.8 0 0 0 96 192v8H72a24 24 0 0 1-24-24a40 40 0 0 0-40-40a8 8 0 0 0 0 16a24 24 0 0 1 24 24a40 40 0 0 0 40 40h24v16a8 8 0 0 0 16 0v-40a24 24 0 0 1 48 0v40a8 8 0 0 0 16 0v-40a39.8 39.8 0 0 0-8.44-24.53A56.06 56.06 0 0 0 216 112v-8a58.14 58.14 0 0 0-7.69-28.32M200 112a40 40 0 0 1-40 40h-48a40 40 0 0 1-40-40v-8a41.74 41.74 0 0 1 6.9-22.48a8 8 0 0 0 1.1-7.69a43.81 43.81 0 0 1 .79-33.58a43.88 43.88 0 0 1 32.32 20.06a8 8 0 0 0 6.71 3.69h32.35a8 8 0 0 0 6.74-3.69a43.87 43.87 0 0 1 32.32-20.06a43.81 43.81 0 0 1 .77 33.58a8.09 8.09 0 0 0 1 7.65a41.72 41.72 0 0 1 7 22.52Z"/></svg>`,
+	Telegram: `<svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256"><path fill="currentColor" d="M236.88 26.19a9 9 0 0 0-9.16-1.57L25.06 103.93a14.22 14.22 0 0 0 2.43 27.21L80 141.45V200a15.92 15.92 0 0 0 10 14.83a15.91 15.91 0 0 0 17.51-3.73l25.32-26.26L173 220a15.88 15.88 0 0 0 10.51 4a16.3 16.3 0 0 0 5-.79a15.85 15.85 0 0 0 10.67-11.63L239.77 35a9 9 0 0 0-2.89-8.81m-61.14 36l-89.59 64.16l-49.6-9.73ZM96 200v-47.48l24.79 21.74Zm87.53 8l-82.68-72.5l119-85.29Z"/></svg>`
+};
+
+const profilesInfo = profiles.map(({ network, url }) => {
+	const icon = SOCIAL_ICONS[network];
+
+	return {
+		id: network,
+		section: 'Social',
+		title: `Abrir ${network}`,
+		url,
+		icon
+	};
+});
+
+profilesInfo.unshift(
+	{
+		id: 'phone',
+		section: 'Acciones',
+		title: `Llamar al celular`,
+		url: `tel:${phone}`,
+		icon: '<svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256"><path fill="currentColor" d="m222.37 158.46l-47.11-21.11l-.13-.06a16 16 0 0 0-15.17 1.4a8.12 8.12 0 0 0-.75.56L134.87 160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16 16 0 0 0 1.32-15.06v-.12L97.54 33.64a16 16 0 0 0-16.62-9.52A56.26 56.26 0 0 0 32 80c0 79.4 64.6 144 144 144a56.26 56.26 0 0 0 55.88-48.92a16 16 0 0 0-9.51-16.62M176 208A128.14 128.14 0 0 1 48 80a40.2 40.2 0 0 1 34.87-40a.61.61 0 0 0 0 .12l21 47l-20.67 24.74a6.13 6.13 0 0 0-.57.77a16 16 0 0 0-1 15.7c9.06 18.53 27.73 37.06 46.46 46.11a16 16 0 0 0 15.75-1.14a8.44 8.44 0 0 0 .74-.56L168.89 152l47 21.05h.11A40.21 40.21 0 0 1 176 208"/></svg>'
+	},
+	{
+		id: 'email',
+		section: 'Acciones',
+		title: `Escribir un correo`,
+		url: `mailto:${email}`,
+		icon: '<svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256"><path fill="currentColor" d="M224 48H32a8 8 0 0 0-8 8v136a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V56a8 8 0 0 0-8-8m-96 85.15L52.57 64h150.86ZM98.71 128L40 181.81V74.19Zm11.84 10.85l12 11.05a8 8 0 0 0 10.82 0l12-11.05l58 53.15H52.57ZM157.29 128L216 74.18v107.64Z"/></svg>'
+	}
+);
+---
+
+<footer class='fixed bottom-0 w-screen bg-white py-4 shadow-2xl dark:bg-neutral-800'>
+	<!-- todo: [Front] Jose Luis Parra [2024-02-27 22:18:25] Mejorar diseño. -->
+	<p class='m-0'>Pulsa <kbd>Cmd</kbd> + <kbd>K</kbd> para abrir la paleta de comandos.</p>
+</footer>
+
+<ninja-keys placeholder='Buscar comando' hideBreadcrumbs data-info={JSON.stringify(profilesInfo)}></ninja-keys>
+
+<script>
+	import 'ninja-keys';
+
+	interface NinjaInfo {
+		id: string;
+		section: string;
+		title: string;
+		url: string;
+		icon: string;
+		hotkey: string;
+		handler?: () => void;
+	}
+
+	const ninja = document.querySelector('ninja-keys');
+
+	const ICONS: Record<string, string> = {
+		Navegation: `<svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256"><path fill="currentColor" d="M117.59 105.69a14.75 14.75 0 0 0 20.82 0l31.28-31.28a14.75 14.75 0 0 0 0-20.83L138.41 22.3a14.74 14.74 0 0 0-20.82 0L86.31 53.58a14.75 14.75 0 0 0 0 20.83ZM94.8 62.07l31.27-31.28a2.74 2.74 0 0 1 3.86 0l31.27 31.28a2.71 2.71 0 0 1 0 3.85L129.93 97.2a2.74 2.74 0 0 1-3.86 0L94.8 65.92a2.71 2.71 0 0 1 0-3.85m138.89 55.52l-31.28-31.28a14.74 14.74 0 0 0-20.82 0l-31.28 31.28a14.74 14.74 0 0 0 0 20.82l31.28 31.28a14.74 14.74 0 0 0 20.83 0l31.27-31.28a14.72 14.72 0 0 0 0-20.82m-8.48 12.34l-31.28 31.27a2.71 2.71 0 0 1-3.85 0l-31.28-31.27a2.74 2.74 0 0 1 0-3.86l31.28-31.27a2.72 2.72 0 0 1 3.85 0l31.28 31.28a2.74 2.74 0 0 1 0 3.85m-119.52-12.34L74.41 86.31a14.75 14.75 0 0 0-20.83 0l-31.27 31.28a14.72 14.72 0 0 0 0 20.82l31.27 31.28a14.73 14.73 0 0 0 20.82 0l31.28-31.28a14.74 14.74 0 0 0 .01-20.82m-8.49 12.34L65.92 161.2a2.71 2.71 0 0 1-3.85 0l-31.28-31.27a2.74 2.74 0 0 1 0-3.86L62.07 94.8a2.72 2.72 0 0 1 3.85 0l31.28 31.27a2.74 2.74 0 0 1 0 3.86m41.21 20.38a14.74 14.74 0 0 0-20.82 0l-31.28 31.28a14.74 14.74 0 0 0 0 20.82l31.28 31.28a14.74 14.74 0 0 0 20.82 0l31.28-31.28a14.74 14.74 0 0 0 0-20.82Zm22.79 43.62l-31.27 31.28a2.74 2.74 0 0 1-3.86 0L94.8 193.93a2.71 2.71 0 0 1 0-3.85l31.27-31.28a2.74 2.74 0 0 1 3.86 0l31.27 31.28a2.71 2.71 0 0 1 0 3.85"/></svg>`,
+		Theme: `<svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256"><path fill="currentColor" d="M200.77 53.89A103.27 103.27 0 0 0 128 24h-1.07A104 104 0 0 0 24 128c0 43 26.58 79.06 69.36 94.17A32 32 0 0 0 136 192a16 16 0 0 1 16-16h46.21a31.81 31.81 0 0 0 31.2-24.88a104.43 104.43 0 0 0 2.59-24a103.28 103.28 0 0 0-31.23-73.23m13 93.71a15.89 15.89 0 0 1-15.56 12.4H152a32 32 0 0 0-32 32a16 16 0 0 1-21.31 15.07C62.49 194.3 40 164 40 128a88 88 0 0 1 87.09-88h.9a88.35 88.35 0 0 1 88 87.25a88.86 88.86 0 0 1-2.18 20.35ZM140 76a12 12 0 1 1-12-12a12 12 0 0 1 12 12m-44 24a12 12 0 1 1-12-12a12 12 0 0 1 12 12m0 56a12 12 0 1 1-12-12a12 12 0 0 1 12 12m88-56a12 12 0 1 1-12-12a12 12 0 0 1 12 12"/></svg>`,
+		Light: `<svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256"><path fill="currentColor" d="M120 40V16a8 8 0 0 1 16 0v24a8 8 0 0 1-16 0m72 88a64 64 0 1 1-64-64a64.07 64.07 0 0 1 64 64m-16 0a48 48 0 1 0-48 48a48.05 48.05 0 0 0 48-48M58.34 69.66a8 8 0 0 0 11.32-11.32l-16-16a8 8 0 0 0-11.32 11.32Zm0 116.68l-16 16a8 8 0 0 0 11.32 11.32l16-16a8 8 0 0 0-11.32-11.32M192 72a8 8 0 0 0 5.66-2.34l16-16a8 8 0 0 0-11.32-11.32l-16 16A8 8 0 0 0 192 72m5.66 114.34a8 8 0 0 0-11.32 11.32l16 16a8 8 0 0 0 11.32-11.32ZM48 128a8 8 0 0 0-8-8H16a8 8 0 0 0 0 16h24a8 8 0 0 0 8-8m80 80a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8m112-88h-24a8 8 0 0 0 0 16h24a8 8 0 0 0 0-16"/></svg>`,
+		Dark: `<svg style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256"><path fill="currentColor" d="M233.54 142.23a8 8 0 0 0-8-2a88.08 88.08 0 0 1-109.8-109.8a8 8 0 0 0-10-10a104.84 104.84 0 0 0-52.91 37A104 104 0 0 0 136 224a103.09 103.09 0 0 0 62.52-20.88a104.84 104.84 0 0 0 37-52.91a8 8 0 0 0-1.98-7.98m-44.64 48.11A88 88 0 0 1 65.66 67.11a89 89 0 0 1 31.4-26A106 106 0 0 0 96 56a104.11 104.11 0 0 0 104 104a106 106 0 0 0 14.92-1.06a89 89 0 0 1-26.02 31.4"/></svg>`
+	};
+
+	if (ninja != null) {
+		const info = ninja.getAttribute('data-info') ?? '[]';
+		const parsedInfo = JSON.parse(info) as NinjaInfo[];
+
+		const data = parsedInfo.map(({ url, icon, id, section, title }) => {
+			return {
+				id,
+				title,
+				icon,
+				section,
+				handler: () => window.open(url, '_blank')
+			};
+		});
+
+		ninja.data = [
+			...data,
+			{
+				id: 'navigation',
+				title: 'Secciones',
+				icon: ICONS.Navegation,
+				children: ['top', 'about', 'experience', 'certification', 'projects', 'skills'],
+				section: 'Navegación',
+				handler: () => {
+					ninja.open({ parent: 'navigation' });
+					return { keepOpen: true };
+				}
+			},
+			{
+				id: 'top',
+				title: 'Inicio',
+				parent: 'navigation',
+				handler: () => (window.location.href = '#')
+			},
+			{
+				id: 'about',
+				title: 'Sobre mí',
+				parent: 'navigation',
+				handler: () => (window.location.href = '#about')
+			},
+			{
+				id: 'experience',
+				title: 'Experiencia Laboral',
+				parent: 'navigation',
+				handler: () => (window.location.href = '#experience')
+			},
+			{
+				id: 'certification',
+				title: 'Certificaciones',
+				parent: 'navigation',
+				handler: () => (window.location.href = '#certification')
+			},
+			{
+				id: 'projects',
+				title: 'Proyectos',
+				parent: 'navigation',
+				handler: () => (window.location.href = '#projects')
+			},
+			{
+				id: 'skills',
+				title: 'Habilidades',
+				parent: 'navigation',
+				handler: () => (window.location.href = '#skills')
+			},
+			{
+				id: 'theme',
+				title: 'Modo oscuro',
+				icon: ICONS.Theme,
+				children: ['theme_light', 'theme_dark'],
+				section: 'Configuración',
+				handler: () => {
+					ninja.open({ parent: 'theme' });
+					return { keepOpen: true };
+				}
+			},
+			{
+				id: 'theme_dark',
+				title: 'Activar',
+				icon: ICONS.Dark,
+				parent: 'theme',
+				handler: () => {
+					document.documentElement.classList.add('dark');
+					ninja.classList.add('dark');
+					localStorage.theme = 'dark';
+				}
+			},
+			{
+				id: 'theme_light',
+				title: 'Desactivar',
+				icon: ICONS.Light,
+				parent: 'theme',
+				handler: () => {
+					document.documentElement.classList.remove('dark');
+					ninja.classList.remove('dark');
+					localStorage.theme = '';
+				}
+			}
+		];
+	}
+</script>
+
+<style>
+	ninja-keys {
+		--ninja-icon-color: theme('colors.primary');
+		--ninja-accent-color: theme('colors.primary');
+		--ninja-backdrop-filter: blur(5px);
+	}
+
+	kbd {
+		@apply rounded-md border border-gray-300 bg-gray-200 px-1.5 py-0.5 text-xs font-normal text-neutral-800 dark:border-neutral-500 dark:bg-gray-600 dark:text-white/90;
+	}
+</style>

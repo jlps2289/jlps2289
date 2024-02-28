@@ -87,7 +87,7 @@
 			"color": "61DAFB"
 		},
 		{
-			"name": "Next.js",
+			"name": "NextJS",
 			"icon": "nextdotjs",
 			"color": "000000"
 		},
@@ -112,7 +112,7 @@
 			"color": "3178C6"
 		},
 		{
-			"name": "Node.js",
+			"name": "NodeJS",
 			"icon": "nodedotjs",
 			"color": "339933"
 		},
@@ -157,7 +157,7 @@
 			"color": "0175C2"
 		},
 		{
-			"name": "Mongo DB",
+			"name": "Mongo_DB",
 			"icon": "mongodb",
 			"color": "47A248"
 		}

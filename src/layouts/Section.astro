@@ -2,12 +2,13 @@
 interface Props {
 	title?: string;
 	class?: string;
+	id?: string;
 }
 
-const { title, class: customClass = '' } = Astro.props;
+const { title, id, class: customClass = '' } = Astro.props;
 ---
 
-<section class={`group/section py-8 ${customClass}`}>
+<section class={`group/section py-8 ${customClass}`} id={id}>
 	{title && <h3 class='mb-4'>{title}</h3>}
 	<slot />
 </section>

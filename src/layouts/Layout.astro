@@ -74,3 +74,16 @@ const { name, label, summary } = basics;
 		@apply text-pretty text-sm font-light;
 	}
 </style>
+
+<script>
+	if (
+		localStorage.theme === 'dark' ||
+		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	) {
+		document.documentElement.classList.add('dark');
+		document.querySelector('ninja-keys')?.classList.add('dark');
+	} else {
+		document.documentElement.classList.remove('dark');
+		document.querySelector('ninja-keys')?.classList.remove('dark');
+	}
+</script>
