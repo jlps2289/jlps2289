@@ -46,16 +46,15 @@ const issuersKeys = Object.keys(issuers);
 					</summary>
 
 					<div class='p-8 pt-4'>
-						<ul>
+						<ul class='list-inside list-disc'>
 							{issuers[i].map(c => (
-								<li class='mb-1'>
+								<li class='mb-2'>
 									<a
-										class='group/link w-fit text-pretty text-sm hover:text-primary hover:underline'
+										class='text-pretty text-sm hover:text-primary hover:underline'
 										href={c.url}
 										target='_blank'
 										rel='noopener noreferrer'>
 										[{dayjs(c.date).format('MM-YYYY')}] {c.name}
-										<ExternalLink class='inline-block h-4 w-4 opacity-0 transition-opacity group-hover/link:opacity-100' />
 									</a>
 								</li>
 							))}
