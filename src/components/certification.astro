@@ -37,12 +37,12 @@ const issuersKeys = Object.keys(issuers);
 						class='flex cursor-pointer items-center gap-3 p-4'
 						title={`Ver los certificados de ${i} (${issuers[i].length} certificados)`}>
 						<Image class='aspect-square rounded-full shadow-lg' src={`/brands/${i}.webp`} alt={i} width={40} height={40} />
-						<h5>
+						<h4 class='text-lg font-normal'>
 							{i}
 							<small class='-mt-1 block text-xs font-light text-secondary/90 dark:text-neutral-200'>
 								({issuers[i].length} Certificados)
 							</small>
-						</h5>
+						</h4>
 					</summary>
 
 					<div class='p-8 pt-4'>
