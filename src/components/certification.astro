@@ -1,5 +1,68 @@
 ---
+import { Image } from 'astro:assets';
+
+import dayjs from 'dayjs';
+
+// Data
+import { certificates } from '@cv';
+
+// Components
 import Section from '@/layouts/Section.astro';
+import ExternalLink from './icons/external-link.astro';
+
+const issuers = certificates.reduce(
+	(a, b) => {
+		a[b.issuer] = a[b.issuer] ?? [];
+		a[b.issuer].push(b);
+		return a;
+	},
+	{} as { [x: string]: typeof certificates }
+);
+
+const issuersKeys = Object.keys(issuers);
 ---
 
-<Section title='Certificaciones' id='certification' />
+<Section title='Certificaciones' id='certification'>
+	<p class='mb-8'>
+		Los conocimientos de diseño y desarrollo web los he adquirido a través del aprendizaje autónomo y mi experiencia laboral.
+	</p>
+
+	<div class='flex flex-col gap-2'>
+		{
+			issuersKeys.map(i => (
+				<details
+					class='group/certificate rounded-xl border border-secondary/25 ring-primary transition hover:ring-2 dark:border-neutral-200/25'
+					name='certificates'>
+					<summary
+						class='flex cursor-pointer items-center gap-3 p-4'
+						title={`Ver los certificados de ${i} (${issuers[i].length} certificados)`}>
+						<Image class='aspect-square rounded-full shadow-lg' src={`/brands/${i}.webp`} alt={i} width={40} height={40} />
+						<h5>
+							{i}
+							<small class='-mt-1 block text-xs font-light text-secondary/90 dark:text-neutral-200'>
+								({issuers[i].length} Certificados)
+							</small>
+						</h5>
+					</summary>
+
+					<div class='p-8 pt-4'>
+						<ul>
+							{issuers[i].map(c => (
+								<li class='mb-1'>
+									<a
+										class='group/link w-fit text-pretty text-sm hover:text-primary hover:underline'
+										href={c.url}
+										target='_blank'
+										rel='noopener noreferrer'>
+										[{dayjs(c.date).format('MM-YYYY')}] {c.name}
+										<ExternalLink class='inline-block h-4 w-4 opacity-0 transition-opacity group-hover/link:opacity-100' />
+									</a>
+								</li>
+							))}
+						</ul>
+					</div>
+				</details>
+			))
+		}
+	</div>
+</Section>

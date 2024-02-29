@@ -74,10 +74,166 @@
 	],
 	"certificates": [
 		{
-			"name": "Certificate",
-			"date": "2021-11-07",
-			"issuer": "Company",
-			"url": "https://certificate.com"
+			"name": "Dart: De cero hasta los detalles",
+			"date": "2023-12-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-ab251855-1e83-47d7-b1c8-8c388beee0aa"
+		},
+		{
+			"name": "Visual Studio Code: Mejora tu velocidad para codificar",
+			"date": "2023-10-01",
+			"issuer": "DevTalles",
+			"url": "https://cursos.devtalles.com/certificates/odb8pqwdqf"
+		},
+		{
+			"name": "React Query - Un poderoso gestor de estado asíncrono",
+			"date": "2023-10-01",
+			"issuer": "DevTalles",
+			"url": "https://cursos.devtalles.com/certificates/dnfsmrvln2"
+		},
+		{
+			"name": "React: De cero a experto (Hooks y MERN)",
+			"date": "2022-02-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-de0d586b-ff89-463e-95d3-57f3fe48f9c8/"
+		},
+		{
+			"name": "ReactiveX - RxJs: De cero hasta los detalles",
+			"date": "2020-08-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-caf2b772-535f-4b22-9843-8c8924f73dcd/"
+		},
+		{
+			"name": "DevOps Essentials - Español",
+			"date": "2020-07-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-dafb6388-9f17-4ab1-a376-eb3102e32693/"
+		},
+		{
+			"name": "Lógica Programación: Aprende Programar en Cualquier Lenguaje",
+			"date": "2020-07-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-3be7100e-0d63-4319-84d4-b6054178a5f8/"
+		},
+		{
+			"name": "Mastering Figma: Beginner to Expert [2022]",
+			"date": "2020-07-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-74d5ef1c-0fa7-4552-b79a-ffb01ad77a36/"
+		},
+		{
+			"name": "[2020] Scrum Master Certificación",
+			"date": "2020-07-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-4ddf71bc-950f-43d2-a640-fbc02f17e365/"
+		},
+		{
+			"name": "60+ Herramientas de desarrollo y diseño web",
+			"date": "2019-08-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-FDV1H1V5/"
+		},
+		{
+			"name": "Git y GitHub Completo Desde Cero",
+			"date": "2019-08-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-N6FYMH24/"
+		},
+		{
+			"name": "REDUX en Angular con NGRX: Desde las bases hasta la práctica",
+			"date": "2019-08-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-QU354Y53/"
+		},
+		{
+			"name": "Angular: Aplicaciones en tiempo real con sockets y rest",
+			"date": "2019-05-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-5BD743DP/"
+		},
+		{
+			"name": "PWA - Aplicaciones Web Progresivas: De cero a experto",
+			"date": "2019-03-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-P21GEISL/"
+		},
+		{
+			"name": "Visual Studio Code: Mejora tu velocidad para codificar",
+			"date": "2019-03-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-LWXWBSFC/"
+		},
+		{
+			"name": "TypeScript: Tu completa guía y manual de mano.",
+			"date": "2018-12-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-2O776PE6/"
+		},
+		{
+			"name": "Compodoc: Crea documentación en proyectos Angular/Ionic/TS",
+			"date": "2018-11-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-MLQ9UI9J/"
+		},
+		{
+			"name": "Node: De cero a experto",
+			"date": "2018-10-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-S3Q0ZCNV/"
+		},
+		{
+			"name": "Programación para principiantes - Primeros pasos",
+			"date": "2018-05-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-IFK4SJMR/"
+		},
+		{
+			"name": "[Appsco] Curso profesional de Git y GitHub 2017",
+			"date": "2018-05-01",
+			"issuer": "Platzi",
+			"url": "https://platzi.com/p/jl.ps2289/curso/1194-git-appsco-2017/diploma/detalle/"
+		},
+		{
+			"name": "Curso de Programación Básica",
+			"date": "2018-04-01",
+			"issuer": "Platzi",
+			"url": "https://platzi.com/p/jl.ps2289/curso/1193-basica-appsco/diploma/detalle/"
+		},
+		{
+			"name": "Angular Avanzado: Lleva tus bases al siguiente nivel - MEAN",
+			"date": "2018-01-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-TM40VVAM/"
+		},
+		{
+			"name": "JavaScript: de cero hasta los detalles (ES5)",
+			"date": "2018-01-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-SXYVZZ1Y/"
+		},
+		{
+			"name": "Angular 5 y TypeScript - Curso de introducción paso a paso",
+			"date": "2017-11-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-JPID5MZ8/"
+		},
+		{
+			"name": "Angular: Convierte cualquier template HTML en una WebAPP",
+			"date": "2017-09-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-QCK6UPUO/"
+		},
+		{
+			"name": "Desarrollo web con JavaScript, Angular, NodeJS y MongoDB",
+			"date": "2017-09-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-3D56KQ0H/"
+		},
+		{
+			"name": "Angular: De cero a experto",
+			"date": "2017-06-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-UZYQ9PR3/"
 		}
 	],
 	"skills": [
