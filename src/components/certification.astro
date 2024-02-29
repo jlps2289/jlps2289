@@ -46,11 +46,11 @@ const issuersKeys = Object.keys(issuers);
 					</summary>
 
 					<div class='p-8 pt-4'>
-						<ul class='list-inside list-disc'>
+						<ol class='list-outside list-decimal ps-10 accent-primary'>
 							{issuers[i].map(c => (
-								<li class='mb-2'>
+								<li class='transition-colors hover:marker:text-primary'>
 									<a
-										class='text-pretty text-sm hover:text-primary hover:underline'
+										class='inline-block text-pretty py-2 text-sm transition-all hover:text-primary hover:underline'
 										href={c.url}
 										target='_blank'
 										rel='noopener noreferrer'>
@@ -58,7 +58,7 @@ const issuersKeys = Object.keys(issuers);
 									</a>
 								</li>
 							))}
-						</ul>
+						</ol>
 					</div>
 				</details>
 			))
