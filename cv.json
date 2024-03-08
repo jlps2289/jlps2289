@@ -74,6 +74,12 @@
 	],
 	"certificates": [
 		{
+			"name": "Flutter: Una introducción al SDK de Google",
+			"date": "2024-03-01",
+			"issuer": "Udemy",
+			"url": "https://ude.my/UC-2b73b60f-f90f-4d47-9199-d23446946d2e"
+		},
+		{
 			"name": "Dart: De cero hasta los detalles",
 			"date": "2023-12-01",
 			"issuer": "Udemy",
